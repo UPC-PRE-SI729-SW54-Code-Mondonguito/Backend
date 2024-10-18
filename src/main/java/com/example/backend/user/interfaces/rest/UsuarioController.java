@@ -1,7 +1,7 @@
-package com.example.backend.controller;
+package com.example.backend.user.interfaces.rest;
 
-import com.example.backend.entity.Usuario;
-import com.example.backend.service.UsuarioService;
+import com.example.backend.user.domain.model.aggregates.Usuario;
+import com.example.backend.user.application.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,7 @@
-package com.example.backend.service;
+package com.example.backend.user.application;
 
-import com.example.backend.entity.Usuario;
-import com.example.backend.repository.UsuarioRepository;
+import com.example.backend.user.domain.model.aggregates.Usuario;
+import com.example.backend.user.infrastructure.persistence.jpa.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,8 +10,12 @@ import java.util.Optional;
 
 @Service
 public class UsuarioService {
-    @Autowired
-    private UsuarioRepository usuarioRepository;
+
+    private final UsuarioRepository usuarioRepository;
+
+    public UsuarioService(UsuarioRepository usuarioRepository) {
+        this.usuarioRepository = usuarioRepository;
+    }
 
     public List<Usuario> getAllUsuarios() {
         return usuarioRepository.findAll();
@@ -27,8 +31,7 @@ public class UsuarioService {
 
     public Usuario updateUsuario(Long id, Usuario usuarioDetails) {
         Usuario usuario = usuarioRepository.findById(id).orElseThrow();
-        usuario.setName(usuarioDetails.getName());
-        usuario.setEmail(usuarioDetails.getEmail());
+
         return usuarioRepository.save(usuario);
     }
 
