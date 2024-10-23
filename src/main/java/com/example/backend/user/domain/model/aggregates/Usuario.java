@@ -2,6 +2,7 @@ package com.example.backend.user.domain.model.aggregates;
 
 import com.example.backend.user.domain.model.valueobjects.UsuarioPersonalInfo;
 import com.example.backend.user.domain.model.valueobjects.UsuarioRol;
+import com.example.backend.user.domain.model.commands.CreateUsusarioCommand;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -36,12 +37,11 @@ public class Usuario {
 
 
 
-    /*
-    public Usuario(CreateUsuarioCommand command){
-        this.personalInfo = new UsuarioPersonalInfo(command.fullname, command.age, command.dni);
-        this.rol = new UsuarioRol(command.rol)
+    public Usuario(CreateUsusarioCommand command){
+        this.personalInfo = new UsuarioPersonalInfo(command.fullname(), command.age(), command.dni());
+        this.rol = new UsuarioRol(command.rol());
     }
-    */
+
 
     public String getFullInfo(){
         return personalInfo.getFullInfo();

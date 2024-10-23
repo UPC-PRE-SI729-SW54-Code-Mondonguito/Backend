@@ -4,7 +4,7 @@ import jakarta.persistence.Embeddable;
 
 @Embeddable
 public record UsuarioPersonalInfo(String fullname, String age, String dni) {
-    public UsuarioPersonalInfo() {this(null,null, null);}
+    public UsuarioPersonalInfo(String dni) {this(null,null, null);}
 
     public UsuarioPersonalInfo{
         if (fullname == null || dni == null || fullname.isBlank() || dni.isBlank()) {
