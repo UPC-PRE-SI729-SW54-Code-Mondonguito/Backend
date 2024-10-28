@@ -2,7 +2,7 @@ package com.example.backend.user.application;
 
 
 import com.example.backend.user.domain.model.aggregates.Usuario;
-import com.example.backend.user.domain.model.commands.CreateUsusarioCommand;
+import com.example.backend.user.domain.model.commands.CreateUsuarioCommand;
 import com.example.backend.user.domain.model.valueobjects.UsuarioPersonalInfo;
 import com.example.backend.user.domain.services.UsuarioCommandService;
 import com.example.backend.user.infrastructure.persistence.jpa.repositories.UsuarioRepository;
@@ -19,9 +19,9 @@ public class UsuarioCommandServiceImp implements UsuarioCommandService {
     }
 
     @Override
-    public Optional<Usuario> handle(CreateUsusarioCommand command){
+    public Optional<Usuario> handle(CreateUsuarioCommand command){
         var dni = new UsuarioPersonalInfo(command.dni());
-        usuarioRepository.findByDni(dni).map(usuario -> {
+        usuarioRepository.findByDni(String.valueOf(dni)).map(usuario -> {
             throw new IllegalArgumentException("Profile with DNI "+dni+" already exists");
         });
         var usuario = new Usuario(command);
