@@ -2,11 +2,10 @@ package com.example.backend.user.domain.model.aggregates;
 
 import com.example.backend.user.domain.model.valueobjects.UsuarioPersonalInfo;
 import com.example.backend.user.domain.model.valueobjects.UsuarioRol;
-import com.example.backend.user.domain.model.commands.CreateUsusarioCommand;
+import com.example.backend.user.domain.model.commands.CreateUsuarioCommand;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.context.annotation.Profile;
 
 @Entity
 @Getter
@@ -37,7 +36,7 @@ public class Usuario {
 
 
 
-    public Usuario(CreateUsusarioCommand command){
+    public Usuario(CreateUsuarioCommand command){
         this.personalInfo = new UsuarioPersonalInfo(command.fullname(), command.age(), command.dni());
         this.rol = new UsuarioRol(command.rol());
     }
