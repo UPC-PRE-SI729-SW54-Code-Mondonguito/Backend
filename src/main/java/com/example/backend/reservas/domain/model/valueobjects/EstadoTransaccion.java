@@ -1,4 +1,7 @@
 package com.example.backend.reservas.domain.model.valueobjects;
 
-public record Espacios() {
+public enum EstadoTransaccion {
+    PAGADA,
+    PORPAGAR
+
 }
