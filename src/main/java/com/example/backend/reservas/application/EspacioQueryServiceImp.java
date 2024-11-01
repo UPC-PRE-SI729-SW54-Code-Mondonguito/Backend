@@ -8,18 +8,26 @@ import com.example.backend.reservas.infrastructure.persistence.jpa.repositories.
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+
+// This service implementation handles queries related to the Espacio entity.
 @Service
 public class EspacioQueryServiceImp implements EspacioQueryService {
     private final EspacioRepository espacioRepository;
-    public EspacioQueryServiceImp(EspacioRepository espacioRepository) { this.espacioRepository = espacioRepository; }
 
+    // Constructor injection of the EspacioRepository.
+    public EspacioQueryServiceImp(EspacioRepository espacioRepository) { 
+        this.espacioRepository = espacioRepository; 
+    }
+
+    // Handles the query to retrieve an Espacio by its ID.
     @Override
     public Optional<Espacio> handle(GetEspacioByIdQuery query){
         return this.espacioRepository.findById(query.espacioId());
     }
+
+    // Handles the query to retrieve an Espacio by its associated Reserva ID.
     @Override
     public Optional<Espacio> handle(GetEspacioByReservaIdQuery query){
         return this.espacioRepository.findById(query.reservaId());
     }
-
 }
