@@ -1,0 +1,29 @@
+[
+  {
+    "conductores_id": 1,
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "correo": "juan.perez@example.com",
+    "contrasena": "password123",
+    "placa_de_vehic": "ABC1234",
+    "DNI": "12345678"
+  },
+  {
+    "conductores_id": 2,
+    "nombre": "Maria",
+    "apellido": "Lopez",
+    "correo": "maria.lopez@example.com",
+    "contrasena": "mypass456",
+    "placa_de_vehic": "XYZ5678",
+    "DNI": "87654321"
+  },
+  {
+    "conductores_id": 3,
+    "nombre": "Carlos",
+    "apellido": "Martinez",
+    "correo": "carlos.martinez@example.com",
+    "contrasena": "securePass789",
+    "placa_de_vehic": "JKL8910",
+    "DNI": "45678901"
+  }
+]

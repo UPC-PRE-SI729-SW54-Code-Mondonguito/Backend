@@ -1,0 +1,17 @@
+[
+  {
+    "espacios_id": 1,
+    "sensor": true,
+    "descripcion": "Espacio de estacionamiento cubierto con sensor de ocupación."
+  },
+  {
+    "espacios_id": 2,
+    "sensor": false,
+    "descripcion": "Espacio descubierto cerca de la entrada."
+  },
+  {
+    "espacios_id": 3,
+    "sensor": true,
+    "descripcion": "Espacio techado con fácil acceso a la salida."
+  }
+]

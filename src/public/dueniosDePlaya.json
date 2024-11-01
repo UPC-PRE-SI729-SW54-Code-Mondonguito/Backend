@@ -1,0 +1,23 @@
+[
+  {
+    "dueno_id": 1,
+    "nombre": "Carlos",
+    "apellido": "Gonzales",
+    "email": "carlos.gonzales@example.com",
+    "RUC": "12345678901"
+  },
+  {
+    "dueno_id": 2,
+    "nombre": "Ana",
+    "apellido": "Ramirez",
+    "email": "ana.ramirez@example.com",
+    "RUC": "98765432109"
+  },
+  {
+    "dueno_id": 3,
+    "nombre": "Luis",
+    "apellido": "Fernandez",
+    "email": "luis.fernandez@example.com",
+    "RUC": "23456789012"
+  }
+]

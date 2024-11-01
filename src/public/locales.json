@@ -1,0 +1,20 @@
+[
+  {
+    "local_id": 1,
+    "descripcion": "Estacionamiento principal en el centro",
+    "ubicacion": "Av. Principal 123, Ciudad",
+    "cantidad_emplea": 5
+  },
+  {
+    "local_id": 2,
+    "descripcion": "Estacionamiento en el centro comercial",
+    "ubicacion": "Calle Comercio 45, Ciudad",
+    "cantidad_emplea": 8
+  },
+  {
+    "local_id": 3,
+    "descripcion": "Estacionamiento en la zona norte",
+    "ubicacion": "Av. Norte 678, Ciudad",
+    "cantidad_emplea": 3
+  }
+]
