@@ -44,5 +44,10 @@ The following guides illustrate how to use some features concretely:
 * [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
 
 Author: 
+Diego Alonso Cacho Seminario
+Rodrigo Liberato Saldaña
+Samuel Elias Molina Asencios
+Omar Harold Rivera Ticllacuri
+Diego Ulises Soto Quispe
 
 
