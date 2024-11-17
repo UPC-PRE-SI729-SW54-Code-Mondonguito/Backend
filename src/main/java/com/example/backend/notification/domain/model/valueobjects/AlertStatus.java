@@ -1,4 +1,10 @@
 package com.example.backend.notification.domain.model.valueobjects;
 
-public class AlertStatus {
+/**
+ * Enum representing the status of an alert.
+ */
+public enum AlertStatus {
+    ACTIVE,
+    INACTIVE,
+    PENDING
 }
