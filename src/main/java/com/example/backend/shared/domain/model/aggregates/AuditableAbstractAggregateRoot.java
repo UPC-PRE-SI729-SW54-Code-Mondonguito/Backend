@@ -1,17 +1,24 @@
 package com.example.backend.shared.domain.model.aggregates;
 
 import java.time.LocalDateTime;
-import jakarta.persistence.MappedSuperclass;
-import jakarta.persistence.Column;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreUpdate;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import org.springframework.data.domain.AbstractAggregateRoot;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 /**
  * Base class for auditable aggregate roots.
  * Manages created and last modified timestamps automatically.
  */
+@EntityListeners(AuditingEntityListener.class)
 @MappedSuperclass
-public abstract class AuditableAbstractAggregateRoot {
+public class AuditableAbstractAggregateRoot<T extends AbstractAggregateRoot<T>> extends AbstractAggregateRoot<T> {
+
+    @Id
+    @Getter
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
 
     @Column(name = "created_date", nullable = false, updatable = false)
     private LocalDateTime createdDate;
